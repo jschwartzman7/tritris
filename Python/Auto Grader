@@ -1,0 +1,163 @@
+import selenium
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.action_chains import ActionChains
+
+'''driver = webdriver.Chrome()
+driver.get('https://acadinfo.wustl.edu/WSHome/Default.aspx')
+
+# click on login button
+driver.find_element(By.NAME, 'ctl00$cphBody$btnLogin').click()
+
+# wait until page loads to access username and password buttons
+try:
+    username = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.NAME, "ucWUSTLKeyLogin$txtUsername")))
+    password = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.NAME, "ucWUSTLKeyLogin$txtPassword")))
+    loginButton = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.NAME, "ucWUSTLKeyLogin$btnLogin")))
+except:
+    driver.quit()
+
+# enter username, password, and login
+username.send_keys("j.f.schwartzman")
+password.send_keys("Baseball2002*")
+loginButton.click()
+
+try:
+    courseRegistraion = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, 'ctl00_mnuHeadMenun4')))
+except:
+    print('courseRegistration not found')
+    driver.quit()
+    
+#coursesRegistration = driver.find_element(By.XPATH, "//table[@id='ctl00_mnuHeadMenu']/tbody/tr/td[id ='ctl00_mnuHeadMenun4']")
+#coursesRegistration = driver.find_element(By.XPATH, "//table[@id='ctl00_mnuHeadMenu']")
+#XPath = //tagname[@Attribute=’Value’]
+
+actions = ActionChains(driver)
+actions.move_to_element(courseRegistraion)
+actions.perform()
+try:
+    registrationWS = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, "//div[@id='ctl00_mnuHeadMenun4Items']/table/tbody/tr[@id='ctl00_mnuHeadMenun29']")))
+except:
+    print('registrationWS not found')
+    driver.quit()
+
+registrationWS.click()'''
+
+
+def loadWorkday():
+    driver.get('https://www.myworkday.com/wustl/d/home.htmld')
+    try:
+        username = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.NAME, "ucWUSTLKeyLogin$txtUsername")))
+        password = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.NAME, "ucWUSTLKeyLogin$txtPassword")))
+        loginButton = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.NAME, "ucWUSTLKeyLogin$btnLogin")))
+    except:
+        driver.quit
+
+    username.send_keys("j.f.schwartzman")
+    password.send_keys("Baseball2002*")
+    loginButton.click()
+
+    '''try:
+        skipButton = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "linkButton")))
+    except:
+        driver.quit
+
+    skipButton.click()'''
+
+def loadGradescope():
+    return
+
+def loadEmail():
+    return
+
+driver = webdriver.Chrome()
+
+loadWorkday()
+#driver.switch_to.new_window('tab')
+loadGradescope()
+#driver.switch_to.new_window('tab')
+loadEmail()
+while True:
+    pass
+
+#driver.get('https://www.gradescope.com/courses/482844')
+
+# wait until page loads to access username and password buttons
+'''try:
+    username = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.NAME, "session[email]")))
+    password = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.NAME, "session[password]")))
+    loginButton = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.NAME, "commit")))
+except:
+    driver.quit()
+
+print("found keys")
+# enter username, password, and login
+username.send_keys("j.f.schwartzman@wustl.edu")
+password.send_keys("Baseball2002*")
+loginButton.click()
+
+
+driver.switch_to.new_window('tab')
+#driver.get('https://acadinfo.wustl.edu/WSHome/Default.aspx')
+driver.get('https://outlook.office365.com/mail/')
+
+# click on login button
+#driver.find_element(By.NAME, 'ctl00$cphBody$btnLogin').click()
+
+# wait until page loads to access username and password buttons
+try:
+    username = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.NAME, "ucWUSTLKeyLogin$txtUsername")))
+    password = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.NAME, "ucWUSTLKeyLogin$txtPassword")))
+    loginButton = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.NAME, "ucWUSTLKeyLogin$btnLogin")))
+except:
+    driver.quit()
+
+# enter username, password, and login
+username.send_keys("j.f.schwartzman")
+password.send_keys("Baseball2002*")
+loginButton.click()
+
+try:
+    email = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "i0116")))
+    next = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "idSIButton9")))
+except:
+    driver.quit()
+
+email.send_keys("j.f.schwartzman@wustl.edu")
+next.click()
+
+try:
+    username = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.NAME, "ucWUSTLKeyLogin$txtUsername")))
+    password = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.NAME, "ucWUSTLKeyLogin$txtPassword")))
+    loginButton = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.NAME, "ucWUSTLKeyLogin$btnLogin")))
+except:
+    driver.quit()
+
+username.send_keys("j.f.schwartzman")
+password.send_keys("Baseball2002*")
+loginButton.click()
+
+try:
+    yes = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "idSIButton9")))
+except:
+    driver.quit()
+
+yes.click()
+
+try:
+    input = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "topSearchInput")))
+except:
+    driver.quit()
+
+input.send_keys("jager")
+
+
+
+driver.switch_to.new_window('tab')
+driver.get('https://www.myworkday.com/wustl/d/home.htmld')
+
+while True:
+    pass'''
