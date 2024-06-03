@@ -1,0 +1,97 @@
+:root {
+    --ballDiameter: 30px;
+    --background1: darkblue;
+    --accent1: blue;
+    --background2: #19181F;
+    --accent2: #555279;
+    --background3: #053610;
+    --accent3: #0f8529;
+}
+
+.btn{
+    /*background-color: var(--background1);*/
+    border:none;
+    font-size: 25px;
+    color: #e8e8e8;
+    border-radius: 20px;
+    width:300px;
+    height:80px;
+    margin-bottom: 20px;
+}
+
+.btn:hover{
+    background-color:dodgerblue;
+}
+
+
+#heading{
+    font-size: 100px;
+    color: #e8e8e8;
+    font-family:monospace;
+}
+
+.buttonContainer{
+    width:500px;
+    height:500px;
+    /*background-color: var(--accent1);*/
+    border-radius: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#goHome{
+    width:60px;
+    height:40px;
+    border:none;
+    border-radius: 35%;
+    position: fixed;
+    left:15px;
+    top:15px;
+    /*background-color: var(--background1);*/
+    color:white;
+}
+
+body{
+    height:100vh;
+    width:100vw;
+    background-color:initial;/* var(--background1);*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+}
+
+#gameplayBoundary{
+    background-color: blue;
+    height: 600px;
+    width: 600px;
+    position: fixed;
+    top:100px;
+    left:400px;
+}
+
+#gun{
+    background-color:darkviolet;
+    height: 20px;
+    width:60px;
+    position: fixed;
+}
+
+#ball{
+    background-color:darkslategray;
+    border-radius: 50%;
+    height: var(--ballDiameter);
+    width: var(--ballDiameter);
+    position: fixed;
+}
+#barriers{
+    background-color:green;
+    width:200px;
+    height:75px;
+}
+#trail{
+    background-color: white;
+}

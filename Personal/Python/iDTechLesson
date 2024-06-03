@@ -1,0 +1,40 @@
+'''
+mean, median, max, min, range, mode, variance, standard deviation
+'''
+
+def evaluate(data):
+    length = len(data)
+    mean = sum(data)/length
+    data.sort()
+    if length % 2 == 0:
+        median = (data[int(length/2)] + data[int(length/2-1)]) / 2
+    else:
+        median = data[int(length/2)]
+    maximum = max(data)
+    minimum = min(data)
+    range = maximum - minimum
+    frequences = {point : 0 for point in data}
+    sumSquaredDeviations = 0
+    for point in data:
+        sumSquaredDeviations += (point - mean)**2
+        frequences[point] += 1
+    variance = sumSquaredDeviations / length
+    standardDeviation = variance**(1/2)
+    mode = [point for point in data if frequences[point] == max(frequences.values())]
+
+    print("Mean: ", mean)
+    print("Median: ", median)
+    print("Mode: ", mode, ", occurrences: ", frequences[mode[0]])
+    print("Max: ", maximum)
+    print("Min: ", minimum)
+    print("Variance: ", variance)
+    print("Standard Deviation: ", standardDeviation)
+
+
+lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+import random
+
+lst2 = [random.randint(0, 100) for i in range(500)]
+
+evaluate(lst2)

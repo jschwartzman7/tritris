@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    </head>
+    <body>
+        <link rel="stylesheet" type="text/css" href="menu.css">
+        <script src="game.js"></script>
+        <div id = "gameplayBoundary">
+            <div id = 'gun'></div>
+            <div id = 'ball'></div>
+            <div id = 'barriers'></div>
+            <div id = 'infoSettings'></div>
+            <div id = 'trail'></div>
+        </div>
+        <button type="button" onclick="location.href = 'menu.html'" id ='goHome'>Menu</button>
+        <script>
+            document.querySelector(".container").style.backgroundColor = localStorage.getItem("background")
+            document.querySelector("#goHome").style.backgroundColor = localStorage.getItem("accent")
+        </script>
+
+    </body>
+    
+    
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    </head>
+    <body>
+        
+        <link rel="stylesheet" type="text/css" href="menu.css">
+        <div id = 'heading'>Visual</div>
+        <div class="buttonContainer">
+            <button id="blueBtn" class = "btn" type="button">Blue</button>
+            <button id="purpleBtn" class = "btn" type="button">Purple</button>
+            <button id="greenBtn" class = "btn" type="button">Green</button>
+        </div>
+        <button type="button" onclick="location.href = 'menu.html'" id ='goHome'>Menu</button>
+        <script src="changeColors.js"></script>
+        
+    </body>
+    
+    <!--<script>
+        document.querySelector("body").style.backgroundColor = localStorage.getItem("background");
+        let buttons = document.querySelectorAll(".btn");
+        for(let obj of buttons){
+            obj.style.backgroundColor = localStorage.getItem("background");
+        }
+        document.querySelector(".buttonContainer").style.backgroundColor = localStorage.getItem("accent");
+        document.querySelector("#goHome").style.backgroundColor = localStorage.getItem("accent")
+        function changeColor(color){
+            const newBackground = getComputedStyle(document.documentElement).getPropertyValue('--background'+color);
+            const newAccent = getComputedStyle(document.documentElement).getPropertyValue('--accent'+color);
+            localStorage.setItem("background", newBackground)
+            localStorage.setItem("accent", newAccent)
+            let buttons = document.querySelectorAll(".btn")
+            for(obj of buttons){
+                obj.style.backgroundColor = localStorage.getItem("background")
+            }
+            document.querySelector(".buttonContainer").style.backgroundColor = localStorage.getItem("accent")
+            document.querySelector("body").style.backgroundColor = localStorage.getItem("background");
+            document.querySelector("#goHome").style.backgroundColor = localStorage.getItem("accent")
+        }
+    </script>-->
+</html>

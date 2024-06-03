@@ -1,0 +1,68 @@
+'''
+Program that implements a function that returns a statistical summary of the given numerical data
+Stats include: mean, median, mode, max, min, range, variance, std, 25th percentile, 75th percentile
+'''
+import random
+
+def evaluate(data):
+    mean, median, mode, Max, Min, Range, variance, std, perc25, perc75 = 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+    length = len(data)
+    mean = sum(data)/length
+    data.sort()
+    if length % 2 == 0:
+        median = (data[int(length/2)] + data[int(length/2-1)]) /2
+    else:
+        median = data[int(length/2)]
+    
+    frequencies = {point : data.count(point) for point in data}
+    mode = [point for point in frequencies.keys() if frequencies[point] == max(frequencies.values())]
+    Max = max(data)
+    Min = min(data)
+    Range = Max - Min
+    ssd = sum([(point - mean)**2 for point in data])
+    variance = ssd / length
+    std = variance**(1/2)
+    print("mean: ", mean)
+    print("median: ", median)
+    #print("mode: ", mode, ", count: ", frequencies[mode[0]])
+    print("max: ", Max)
+    print("min: ", Min)
+    print("range: ", Range)
+    print("variance: ", variance)
+    print("standard deviation: ", std)
+
+def evaluate2(data):
+    #mean, median, mode, Max, Min, Range, variance, std, perc25, perc75 = 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+    length = len(data)
+    mean = sum(data)/length
+    data.sort()
+    if length % 2 == 0:
+        median = (data[int(length/2)] + data[int(length/2-1)]) / 2
+    else:
+        median = data[int(length/2)]
+    maximum = max(data)
+    minimum = min(data)
+    range = maximum - minimum
+    frequencies = {point : 0 for point in data}
+    sumSquaredDeviations = 0
+    for point in data:
+        sumSquaredDeviations += (point-mean)**2
+        frequencies[point] += 1
+    mode = [point for point in data if frequencies[point] == max(frequencies.values())]
+    variance = sumSquaredDeviations/length
+    std = variance**(1/2)
+
+    print("Mean: ", mean)
+    print("Median: ", median)
+    print("Mode: ", mode, ", occurrences: ", frequencies[mode[0]])
+    print("Max: ", maximum)
+    print("Min: ", minimum)
+    print("Range: ", range)
+    print("Variance: ", variance)
+    print("Standard Deviation: ", std)
+
+x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+y = [random.randint(-100, 100) for i in range(5000)]
+evaluate2(y)
+
+

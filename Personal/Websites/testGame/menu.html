@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    </head>
+    <body>
+        <script>
+            document.querySelector("body").style.backgroundColor = localStorage.getItem("background");
+        </script>
+        <link rel="stylesheet" type="text/css" href="menu.css">
+        <script src='colors.js'></script>
+        <div id = 'heading'>Bounce</div>
+        <div class="buttonContainer">
+            <button onclick="location.href = 'gameScreen.html'" class = "btn" type="button">New Game</button>
+            <button onclick="location.href = 'selectLevel.html'" class = "btn" type="button">Select Level</button>
+            <button onclick="location.href = 'gameModes.html'" class = "btn" type="button">Gamemodes</button>
+            <button onclick="location.href = 'settings.html'" class = "btn" type="button">Settings</button>
+        </div>
+    </body>
+</html>

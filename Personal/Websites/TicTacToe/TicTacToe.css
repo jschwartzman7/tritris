@@ -1,0 +1,184 @@
+body{
+    background-color: #465c87;
+    font-family:monospace;
+    cursor:default;
+    visibility: hidden;
+}
+.button{
+    border-color:#000000;
+    background-color:#c6c8cc;
+    border-width:thick;
+    border-style: solid;
+    border-radius: 15px;
+    text-align: center;
+}
+#title{
+    width:800px;
+    left:320px;
+    font-size: 100px;
+    font-weight: bold;
+    color:#000000;
+    top:60px;
+    text-align: center;
+    position:relative;
+    font-stretch: ultra-condensed;	
+
+}
+#tag{
+    width:600px;
+    left:420px;
+    font-size: 30px;
+    text-align: center;
+    position:relative;
+    top:100px;
+}
+#twoPlayerButton{
+    width:230px;
+    height:50px;
+    position:relative;
+    font-size:40px;
+    border-width:thick;
+    top:170px;
+    left:605px;
+}
+#onePlayerButton{
+    width:230px;
+    height:50px;
+    position:relative;
+    border-width:thick;
+    font-size:40px;
+    top:240px;
+    left:605px;
+}
+
+#gameMode{
+    position:fixed;
+    color:black;
+    text-align: center;
+    font-size: 55px;
+    font-weight: bold;
+    width:300px;
+    top:20px;
+    left:570px;
+}
+#playerTurn{
+    position:fixed;
+    color:black;
+    text-align: center;
+    font-size: 35px;
+    width:500px;
+    top:90px;
+    left:470px;
+}
+#returnToMenuButtonInGame{
+    position:fixed;
+    color:black;
+    border-width: 5px;
+    font-size: 20px;
+    width:185px;
+    top:60px;
+    left:70px;
+}
+.grid{
+    background-color: black;
+    border-radius: 7px;
+    position:fixed;
+}
+#l1{
+    width:15px;
+    height:530px;
+    top:185px;
+    left:617.5px;
+}
+#l2{
+    width:15px;
+    height:530px;
+    top:185px;
+    left:807.5px;
+}
+#l3{
+    width:530px;
+    height:15px;
+    top:347.5px;
+    left:455px;
+}
+#l4{
+    width:530px;
+    height:15px;
+    top:537.5px;
+    left:455px;
+}
+.square{
+    text-align: center;
+    height:175px;
+    width:175px;
+    position:fixed;
+    font-size: 180px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+#s1{
+    left:442.5px;
+    top:172.5px;
+}
+#s2{
+    left:632.5px;
+    top:172.5px;
+}
+#s3{
+    left:822.5px;
+    top:172.5px;
+}
+#s4{
+    left:442.5px;
+    top:362.5px;
+}
+#s5{
+    left:632.5px;
+    top:362.5px;
+}
+#s6{
+    left:822.5px;
+    top:362.5px;
+}
+#s7{
+    left:442.5px;
+    top:552.5px;
+}
+#s8{
+    left:632.5px;
+    top:552.5px;
+}
+#s9{
+    left:822.5px;
+    top:552.5px;
+}
+
+.gameOver{
+    text-align: center;
+}
+#playAgainButton{
+    font-size: 50px;
+    position:fixed;
+    top:330px;
+    left:520px;
+    width:400px;
+    height:70px;
+}
+#result{
+    font-size: 70px;
+    position:fixed;
+    top:150px;
+    left:320px;
+    font-weight: bold;
+    width:800px;
+    height:100px;
+}
+#returnToMenuButton{
+    position:fixed;
+    font-size: 50px;
+    top:490px;
+    left:470px;
+    width:500px;
+    height:70px;
+}

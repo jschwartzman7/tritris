@@ -1,0 +1,7 @@
+'''
+Created on Jul 20, 2022
+
+@author: jonahschwartzman
+'''
+for i in range(10)
+    print i 
