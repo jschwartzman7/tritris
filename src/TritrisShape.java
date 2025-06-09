@@ -569,8 +569,6 @@ public class TritrisShape {
 		return copy;
 	}
 
-
-
 	public void rotate() {
 		//rotate while staying in bounds, but if this new in bounds rotation position overlaps a shape, revert to old position
 		//copy(cordsMap);
@@ -607,9 +605,6 @@ public class TritrisShape {
 	//	curCords = cordsMap.get(rotation)
 	}
 
-
-
-
 	public LinkedList<int[]> checkDirection(int direction, LinkedList<int[]> cords) {
 		LinkedList<int[]> tempCords = new LinkedList<>();
 		for(int[] cord : cords) {
@@ -628,7 +623,6 @@ public class TritrisShape {
 			tempCords.add(tempCord);
 		}
 		return tempCords;
-
 	}
 
 	public int outOfBounds(LinkedList<int[]> cords) {
@@ -677,7 +671,6 @@ public class TritrisShape {
 			}
 		}
 		return false;
-
 	}
 
 	public void removeCord(int[] cord) {
@@ -734,10 +727,7 @@ public class TritrisShape {
 		else {
 			StdDraw.filledPolygon(triangleX, triangleY);
 		}
-
-
 	}
-
 
 	public void drawShape() {
 		if(type == 0) { // rhombus
@@ -767,40 +757,10 @@ public class TritrisShape {
 			StdDraw.setPenColor(Color.CYAN);
 			StdDraw.setPenColor(209, 123, 63);}
 
-
-		//shadow.clear();
-
 		for(int[] cord: curCords) {
 			drawCord(cord, false);
 			//shadow.add(new int[] {cord[0], cord[1]});
 		}
-
-		/**while(outOfBounds(checkDirection(down, shadow)) != 0) {
-			for(int[] cord : shadow) {
-				transformDown(cord);
-			}
-
-		}
-		for(int[] cord : shadow) {
-			drawCord(cord);
-		}**/
-
-		/**LinkedList<int[]> shadow = new LinkedList<int[]>();
-
-		for(int[] cord: curCords) {
-			drawCord(cord);
-			shadow.add(cord);
-		}
-
-		while(!(touchingFloor() || aboveShape())) {
-			for(int[] cord : shadow) {
-				cord[1] -= 2;
-			}
-
-		}
-		for(int[] cord : shadow) {
-			drawCord(cord);
-		}**/
 	}
 
 	public void drawShadow() {

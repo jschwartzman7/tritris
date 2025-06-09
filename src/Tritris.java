@@ -146,6 +146,7 @@ public class Tritris {
 	public static void removeFullLayers(LinkedList<Integer> fullLayers, LinkedList<int[]> object) {
 
 		//HashSet<TritrisShape> shapesToMove = new HashSet<TritrisShape>();
+		HashSet<int[]> shapesToRemove = new HashSet<int[]>();
 		for(Integer height : fullLayers) {
 			//StdDraw.clear();
 			for(int[] objectCord : object) {
@@ -153,7 +154,7 @@ public class Tritris {
 					//shape.drawShape();
 					for (int[] element : shape.curCords) {
 						if(objectCord[0] == element[0] && objectCord[1] + height == element[1]) {
-							shape.removeCord(new int[] {element[0], element[1]});
+							shapesToRemove.add(new int[] {element[0], element[1]});
 						}
 						//if(i < shape.curCords.size()) {
 							//if(floorCord[0] == shape.curCords.get(i)[0] && floorCord[1] + height < shape.curCords.get(i)[1]) {
@@ -162,10 +163,14 @@ public class Tritris {
 							//}
 						//}
 					}
+					for(int[] cordToRemove : shapesToRemove){
+						shape.removeCord(cordToRemove);
+					}
 				}
 			}
 			//StdDraw.show(1000);
 		}
+		
 
 		MoveShapesDown(fullLayers, object);
 	}
@@ -303,7 +308,6 @@ public class Tritris {
 				shape.drawShape();
 			}
 			drawScore(score);
-
 			if(time % 500 == 0) {
 				//if (curShape.touching(curShape.curCords, floor) || curShape.onTopOfShape(curShape.curCords)){
 				if (curShape.outOfBounds(curShape.checkDirection(down, curShape.curCords)) != 0){
@@ -332,10 +336,6 @@ public class Tritris {
 					curShape.rotate();
 				}
 			}
-
-
-
-
 			StdDraw.show(50);
 			time += 50;
 		}
@@ -344,18 +344,7 @@ public class Tritris {
 		StdDraw.show();
 	}
 
-
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		runGame();
-		//HashSet<int[]> set1 = new HashSet<int[]>();
-		int[] arr1 = new int[] {3, 5};
-		//set1.add(arr1);
-		//HashSet<int[]> set2 = new HashSet<int[]>();
-		int[] arr2 = new int[] {arr1[0], arr1[1]};
-		//set2.add(arr1);
-		System.out.print(arr2==arr1);
-
 	}
-
 }
